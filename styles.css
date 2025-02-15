@@ -114,17 +114,17 @@ body {
 }
 
 .about {
-    color: #f1dfcd;
+    color: #f8eed1;
     text-align: center;
     justify-content: center;
     align-items: center;
+    padding-bottom: 350px;
 }
 
 .about-title {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     color: #ec2994;
-    font-size: 30px;
-    padding-top: 150px;
+    font-size: 40px;
 }
 
 .about-content {
