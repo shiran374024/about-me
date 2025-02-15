@@ -3,14 +3,14 @@ body {
     /* Apply handwriting font to all text */
     margin: 0;
     padding: 0;
-    background-color: #87a3fd;
+    background-image: url(25892.jpg);
     color: #333;
     display: flex;
     justify-content: center;
 }
 
 .sidebar {
-    width: 200px;
+    width: 150px;
     background-color: #333;
     color: #fff;
     height: 100vh;
@@ -60,6 +60,13 @@ body {
     margin-top: 20px;
 }
 
+.sub_titile {
+    font-size: 30px;
+    color: #ec2994;
+    text-align: center;
+    margin-top: 20px;
+}
+
 .subtitle {
     font-size: 18px;
     color: #666;
@@ -101,19 +108,22 @@ body {
 }
 
 .about {
-    color: #01073a;
+    color: #f1dfcd;
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-title {
     margin-bottom: 8px;
     color: #ec2994;
     font-size: 30px;
+    padding-top: 150px;
 }
 
 .about-content {
-    font-size: 18px;
-    padding: 10px;
+    font-size: 22px;
+    padding: 30px;
 }
 
 .cards {
@@ -125,7 +135,7 @@ body {
 }
 
 .card {
-    background-color: #f1e8efd5;
+    background-color: #f7ead7d5;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
