@@ -1,9 +1,120 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title>My vaction - Austria</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiran's Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 </head>
+
 <body>
-	This is my Vaction in austria....
-	
+    <div class="sidebar">
+        <nav class="side-nav">
+            <ul>
+                <li><a href="index-hw.html">Home</a></li>
+                <!-- <li><a href="about.html">About Me</a></li> -->
+                <li><a href="gallery.html">Gallery</a></li>
+                <!-- <li><a href="contact.html">Contact</a></li> -->
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Shiran Amos</h1>
+
+        </header>
+        <section class="profile">
+            <img src="Me.jpeg" alt="Profile Picture" class="profile-picture">
+        </section>
+        <section class="about">
+            <h2 class="about-title">About Me</h2>
+            <p class="about-content">My name is Shiran, I am a quality assurance engineer and a graphic designer.
+                I am passionate about technology and design, and I am always looking for new challenges.
+                I am a creative person who loves to think outside the box and find innovative solutions to complex
+                problems.
+                I am a quick learner and a team player, and I am always looking for ways to improve my skills and
+                knowledge.
+            </p>
+        </section>
+        <section class="cards">
+            <div class="card" onclick="openModal('card1')">
+                <h3 class="card-title">My Story...</h3>
+            </div>
+            <div class="card" onclick="openModal('card2')">
+                <h3 class="card-title">My professional background</h3>
+            </div>
+            <div class="card" onclick="openModal('card3')">
+                <h3 class="card-title">Professional Life</h3>
+            </div>
+            <div class="card" onclick="openModal('card4')">
+                <h3 class="card-title">My vision</h3>
+            </div>
+        </section>
+        <footer class="footer">
+            <h2 class="footer-title">Let's Connect</h2>
+            <p class="footer-content">
+                <a href="https://www.linkedin.com/in/shiran-amos-901515241/" target="_blank">LinkedIn</a> |
+                <a href="https://www.instagram.com/shiran3740?igsh=MWN5aTRkY3FkbjVtNw%3D%3D&utm_source=qr">Instagram</a>
+                |
+                <a href="mailto:shiran374024@gmail.com">Email</a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="modal-title" class="modal-title"></h3>
+            <p id="modal-content"></p>
+        </div>
+    </div>
+
+    <script>
+        const cardData = {
+            card1: {
+                title: "My Story...",
+                content: "I am married with 3 lovely children and live in the city of Arad in southern Israel. Six years ago during the corona disease, I decided to do a 'professional conversion' so that I could also work from home, and after 11 years as a 'dentist's assistant' I started QA studies."
+            },
+            card2: {
+                title: "My professional background",
+                content: "I graduated about 5 years ago studying quality assurance and since then I have been performing manual tests that include test planning documents, investigation tests and finding bugs. As part of my work I use many technological tools, such as monday, jira, gpt and more.. I've recently been taking a Python automation course and I'm impatiently waiting to start combining the manual tests with automated tests."
+            },
+            card3: {
+                title: "Professional Life",
+                content: "I have been working for about 5 years in the development team of 'Atlas', a start-up company located in Omer, Israel. The company is engaged in philanthropy and fundraising and has developed several products for which I am responsible for the entire testing process and their quality."
+            },
+            card4: {
+                title: "My vision",
+                content: "I believe that being a quality assurance is much more than finding bugs. You have to look at the product from all directions, and put emphasis on the user experience and the intuitiveness of the product. The secret is to look from the customer's point of view."
+            }
+        };
+
+        function openModal(cardId) {
+            const modal = document.getElementById('modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalContent = document.getElementById('modal-content');
+
+            modalTitle.innerText = cardData[cardId].title;
+            modalContent.innerText = cardData[cardId].content;
+
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function (event) {
+            const modal = document.getElementById('modal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 </body>
+
 </html>
