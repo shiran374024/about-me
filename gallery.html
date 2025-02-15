@@ -14,9 +14,8 @@
         <nav class="side-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <!-- <li><a href="about.html">About Me</a></li> -->
+                <li><a href="about_me.html">About Me</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <!-- <li><a href="contact.html">Contact</a></li> -->
             </ul>
         </nav>
     </div>
@@ -25,46 +24,30 @@
             <h1 class="title">Gallery</h1>
         </header>
         <p class="gallery-content">Moments of my life...</p>
-        <section class="gallery">
-            <div class="gallery-item">
-                <img src="shiran7.jpeg" alt="Image 1" class="gallery-image">
-            </div>
-            <div class="gallery-item">
-                <img src="shiran8.jpeg" alt="Image 2" class="gallery-image">
-            </div>
-            <div class="gallery-item">
-                <img src="shiran9.jpeg" alt="Image 3" class="gallery-image">
-            </div>
-            <div class="gallery-item">
-                <img src="shiran4.jpg" alt="Image 4" class="gallery-image">
-            </div>
-            <div class="gallery-item">
-                <img src="shiran5.jpg" alt="Image 5" class="gallery-image">
-            </div>
-            <div class="gallery-item">
-                <img src="shiran6.jpg" alt="Image 6" class="gallery-image">
-            </div>
-            <div class="gallery-item">
-                <img src="shiran10.jpeg" alt="Image 10" class="gallery-image">
-
-            </div>
-            <div class="gallery-item">
-                <img src="IMG_3885.jpeg" alt="Image 1" class="gallery-image">
-            </div>
-            <div class="gallery-item">
-                <img src="IMG_8848.jpeg" alt="Image 1" class="gallery-image">
-            </div>
-            <div class="gallery-item">
-                <img src="IMG_8851.jpeg" alt="Image 1" class="gallery-image">
-            </div>
-            <div class="gallery-item">
-                <img src="IMG_8849.jpeg" alt="Image 1" class="gallery-image">
-            </div>
-            <div class="gallery-item">
-                <img src="IMG_8850.jpeg" alt="Image 1" class="gallery-image">
-            </div>
-        </section>
+        <div class="main-image-container">
+            <img id="main-image" src="shiran7.jpeg" alt="Main Image" class="main-image">
+        </div>
+        <div class="thumbnails">
+            <img src="shiran7.jpeg" alt="Thumbnail 1" class="thumbnail" onclick="changeImage('shiran7.jpeg')">
+            <img src="shiran8.jpeg" alt="Thumbnail 2" class="thumbnail" onclick="changeImage('shiran8.jpeg')">
+            <img src="shiran9.jpeg" alt="Thumbnail 3" class="thumbnail" onclick="changeImage('shiran9.jpeg')">
+            <!-- <img src="shiran4.jpg" alt="Thumbnail 4" class="thumbnail" onclick="changeImage('shiran4.jpg')"> -->
+            <img src="shiran5.jpg" alt="Thumbnail 5" class="thumbnail" onclick="changeImage('shiran5.jpg')">
+            <img src="shiran6.jpg" alt="Thumbnail 6" class="thumbnail" onclick="changeImage('shiran6.jpg')">
+            <img src="shiran10.jpeg" alt="Thumbnail 7" class="thumbnail" onclick="changeImage('shiran10.jpeg')">
+            <img src="IMG_3885.jpeg" alt="Thumbnail 8" class="thumbnail" onclick="changeImage('IMG_3885.jpeg')">
+            <img src="IMG_8848.jpeg" alt="Thumbnail 9" class="thumbnail" onclick="changeImage('IMG_8848.jpeg')">
+            <img src="IMG_8851.jpeg" alt="Thumbnail 10" class="thumbnail" onclick="changeImage('IMG_8851.jpeg')">
+            <img src="IMG_8849.jpeg" alt="Thumbnail 11" class="thumbnail" onclick="changeImage('IMG_8849.jpeg')">
+            <img src="IMG_8850.jpeg" alt="Thumbnail 12" class="thumbnail" onclick="changeImage('IMG_8850.jpeg')">
+        </div>
     </div>
+
+    <script>
+        function changeImage(src) {
+            document.getElementById('main-image').src = src;
+        }
+    </script>
 </body>
 
 </html>

@@ -4,9 +4,15 @@ body {
     margin: 0;
     padding: 0;
     background-image: url(25892.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #333;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Full viewport height */
 }
 
 .sidebar {
@@ -44,7 +50,7 @@ body {
 .container {
     margin-left: 220px;
     /* Adjust margin to account for sidebar width */
-    max-width: 800px;
+    max-width: 1200px;
     padding: 20px;
 }
 
@@ -192,16 +198,45 @@ body {
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
+    position: relative;
+    height: 600px;
+    /* Increase height to allow more space for images */
 }
 
 .gallery-item {
+    width: 200px;
+    /* Increase width */
+    height: 200px;
+    /* Increase height */
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    position: absolute;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item.selected {
+    z-index: 10;
+    transform: translate(-50%, -50%) scale(2);
+    left: 50%;
+    top: 50%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .gallery-content {
@@ -211,15 +246,16 @@ body {
     color: #01073a;
 }
 
-.gallery-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
 .gallery-image {
     width: 100%;
     height: auto;
     display: block;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.1);
+    /* Slightly enlarge the image on hover */
 }
 
 .modal {
@@ -266,4 +302,37 @@ body {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+.main-image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-image {
+    width: 600px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
